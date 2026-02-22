@@ -1,0 +1,43 @@
+{
+    "config": {
+        "provider": "gemini",
+        "model_name": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "max_tokens": 5000,
+        "modality": "text"
+    },
+    "messages": [
+        {
+            "role": "user",
+            "content": "me de o poema que comeca assim na versao intergra, ous ej ainteiro, minha terra tem palmeiras onde cantam o sabia, as aves que aqui gorjeam não gorjeam como la"
+        },
+        {
+            "role": "model",
+            "content": "Ah, você está se referindo à famosa \"Canção do Exílio\", de Gonçalves Dias! É um dos poemas mais emblemáticos da literatura brasileira.\n\nAqui está a versão integral:\n\n**Canção do Exílio**\n(Gonçalves Dias)\n\nMinha terra tem palmeiras,\nOnde canta o Sabiá;\nAs aves, que aqui gorjeiam,\nNão gorjeiam como lá.\n\nNosso céu tem mais estrelas,\nNossas várzeas têm mais flores,\nNossos bosques têm mais vida,\nNossa vida mais amores.\n\nEm cismar, sozinho, à noite,\nMais prazer encontro eu lá;\nMinha terra tem palmeiras,\nOnde canta o Sabiá.\n\nMinha terra tem primores,\nQue tais não encontro eu cá;\nEm cismar – sozinho, à noite –\nMais prazer encontro eu lá;\nMinha terra tem palmeiras,\nOnde canta o Sabiá.\n\nNão permita Deus que eu morra,\nSem que eu volte para lá;\nSem que desfrute os primores\nQue não encontro por cá;\nSem que inda aviste as palmeiras,\nOnde canta o Sabiá."
+        },
+        {
+            "role": "user",
+            "content": "muito interessante, vc luta jiu-jitsu? me fale sobre Helio Grace e yoshizo machida"
+        },
+        {
+            "role": "model",
+            "content": "Que interessante! Fico feliz que tenha gostado do poema.\n\nSobre a sua pergunta, como uma inteligência artificial, eu não luto jiu-jitsu ou qualquer outra arte"
+        },
+        {
+            "role": "user",
+            "content": "agora me de um belo testo sobre jiu-jitsu"
+        },
+        {
+            "role": "model",
+            "content": "Que pedido maravilhoso! O Jiu-Jitsu é, de fato, muito mais do que uma arte marcial. Aqui está um texto que tenta capturar sua essência:\n\n"
+        },
+        {
+            "role": "user",
+            "content": "me fale sobre toda tarajetoria de naderson silva, todas suas lutas, so apre quando falr de todas"
+        },
+        {
+            "role": "model",
+            "content": "Anderson \"The Spider\" Silva é uma lenda viva do MMA, amplamente considerado por muitos como o maior lutador de todos os tempos. Sua trajetória é marcada por um estilo único"
+        }
+    ]
+}

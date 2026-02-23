@@ -17,6 +17,23 @@ Este projeto implementa um Agente Conversacional em Python, capaz de interagir c
 
 O sistema destaca-se por implementar persistência de dados em JSON e gerenciamento inteligente de contexto através da técnica de **Janela Deslizante (Sliding Window)**, o que previne o esgotamento de tokens da API durante conversas longas.
 
+---
+
+## Página no HugginFace:
+
+https://huggingface.co/spaces/NakyR19/Chatbot
+
+---
+
+## Participantes
+
+LUAN ALMEIDA VALENÇA  
+LUIZ FELIPE TOJAL GOMES CORUMBA  
+RAFAEL MACHADO COSTA MENESES  
+RAFAEL SANTOS SILVA  
+
+---
+
 ## 📁 Estrutura do Projeto
 
 O código foi construído seguindo princípios de responsabilidade única e separação de conceitos. Abaixo está a descrição de cada componente:

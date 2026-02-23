@@ -35,7 +35,7 @@ Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de
 
 ## 🚀 Como Executar o Projeto
 
-Certifique-se de ter o Python instalado na sua máquina. O único pacote externo necessário para rodar o projeto é o `requests`.
+Certifique-se de ter o Python instalado na sua máquina. Os pacotes externos necessários para rodar o projeto estão em requirements.txt.
 
 1. **Clone o repositório**:
    * No terminal, execute o comando: 

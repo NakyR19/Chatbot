@@ -86,7 +86,7 @@ Certifique-se de ter o Python instalado na sua máquina. Os pacotes externos nec
    pip install -r requirements.txt
 
 4. **Inicie a aplicação:**
-   Estando no diretório raiz do projeto, rode: streamlit run main.py
+   Estando no diretório raiz do projeto, rode: streamlit run src/streamlit_app.py
    O endereço da página estará disponível no terminal(eg.:"<https://localhost:8000>")
 
 5. **Uso interface:**

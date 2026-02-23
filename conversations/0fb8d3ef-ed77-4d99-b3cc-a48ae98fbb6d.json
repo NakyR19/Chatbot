@@ -1,0 +1,20 @@
+{
+    "name": "Traduzir Bom dia Indígena",
+    "config": {
+        "provider": "gemini",
+        "model_name": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "max_tokens": 20,
+        "modality": "text"
+    },
+    "messages": [
+        {
+            "role": "user",
+            "content": "Me forneça a tradução de \"bom dia\" em 5 línguas indígenas diferentes"
+        },
+        {
+            "role": "assistant",
+            "content": "É um desafio interessante, pois muitas línguas indígenas não possuem uma tradução direta para \"bom dia\" no sentido exato que temos em português. Frequentemente, as saudações são mais gerais (\"bom dia/tarde/noite\", \"como você está?\") ou referem-se ao estado do tempo ou da pessoa.\n\nNo entanto, aqui estão 5 exemplos de saudações matinais ou gerais em línguas indígenas, com notas sobre seu significado mais próximo:\n\n1.  **Guarani (Brasil, Paraguai, Bolívia, Argentina):**\n    *   **Ko'ẽ porã!**\n    *   *(Significado aproximado: \"Bom amanhecer!\" ou \"Bom dia!\")*\n\n2.  **Quechua (Peru, Bolívia, Equador e outros países andinos):**\n    *   **Allin tutamanta!**\n    *   *(Significado: \"Boa manhã!\")* - Esta é uma das poucas que tem um equivalente bem direto.\n\n3.  **Nahuatl (México):**\n    *   **Cualli tlaneci!**\n    *   *(Significado: \"Bom amanhecer!\" ou \"Bom dia!\")*\n\n4.  **Yanomami (Brasil, Venezuela):**\n    *   **He ya ma!**\n    *   *(Significado aproximado: Uma saudação geral que pode ser usada pela manhã, como \"Como você está?\" ou simplesmente \"Olá\". Não há um \"bom dia\" direto, mas essa é uma forma comum de iniciar uma interação pela manhã.)*\n\n5.  **Kaingang (Sul do Brasil):**\n    *   **Hoj nẽn?**\n    *   *(Significado aproximado: \"Você está bem?\" ou \"Tudo bem?\". É uma saudação comum que serve para iniciar o dia, perguntando sobre o bem-estar do outro, em vez de um \"bom dia\" direto.)*\n\n**Observação Importante:** As línguas indígenas são muito diversas e complexas. As traduções podem variar dependendo do dialeto, da região e do contexto cultural. Algumas línguas simplesmente não têm uma expressão exata para \"bom dia\" e usam saudações mais gerais ou que questionam o bem-estar da pessoa."
+        }
+    ]
+}

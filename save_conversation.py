@@ -4,16 +4,20 @@ import glob
 import uuid
 from message import Message
 
+# Define a pasta onde os arquivos JSON serão armazenados
 CONVERSATION_DIR = "conversations"
 
 def list_conversations():
+    # Verifica se a pasta existe
     if not os.path.exists(CONVERSATION_DIR):
         return []
     
     conversations = []
+    # Busca todos os arquivos que terminam com .json na pasta definida
     files = glob.glob(os.path.join(CONVERSATION_DIR, "*.json"))
     
     for f in files:
+        # Extrai o nome do arquivo sem a extensão para usar como ID
         cid = os.path.splitext(os.path.basename(f))[0]
         try:
             with open(f, "r", encoding="utf-8") as file:
@@ -26,6 +30,14 @@ def list_conversations():
             conversations.append({"id": cid, "name": "Erro ao ler arquivo"})
             
     return conversations
+
+def delete_conversation(conversation_id):
+    # Remove o arquivo JSON da conversa do diretório
+    filename = os.path.join(CONVERSATION_DIR, f"{conversation_id}.json")
+    if os.path.exists(filename):
+        os.remove(filename)
+        return True
+    return False
 
 def load_json(conversation_id):
     filename = os.path.join(CONVERSATION_DIR, f"{conversation_id}.json")

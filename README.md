@@ -1,3 +1,16 @@
+---
+title: Chatbot
+emoji: 🚀
+colorFrom: red
+colorTo: red
+sdk: docker
+app_port: 8501
+tags:
+- streamlit
+pinned: false
+short_description: ChatBot
+---
+
 # Chatbot de texto com persistência
 
 Este projeto implementa um Agente Conversacional em Python, capaz de interagir com Grandes Modelos de Linguagem (LLMs). Ele possui uma arquitetura modular que permite a troca de motores de Inteligência Artificial em tempo de execução, suportando atualmente o **Google Gemini**.
@@ -22,13 +35,15 @@ O código foi construído seguindo princípios de responsabilidade única e sepa
 Para que o chatbot consiga se comunicar com a inteligência artificial, você precisará inserir as suas próprias chaves de API.
 
 ### 1. Onde alterar no código
+
 Abra o arquivo **`service.py`** e localize as seguintes variáveis nas primeiras linhas do código:
 
 api_key = 'COLOQUE_SUA_CHAVE_DO_GEMINI_AQUI'
 
 Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de produção, recomenda-se o uso de variáveis de ambiente .env para maior segurança).*
 
-### 2. Como obter as chaves 
+### 2. Como obter as chaves
+
 * **Google Gemini:** Acesse o Google AI Studio, faça login com sua conta Google e clique em "Get API key" para gerar a sua chave.
 
 ---
@@ -38,8 +53,8 @@ Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de
 Certifique-se de ter o Python instalado na sua máquina. Os pacotes externos necessários para rodar o projeto estão em requirements.txt.
 
 1. **Clone o repositório**:
-   * No terminal, execute o comando: 
-   git clone https://github.com/NakyR19/Chatbot.git
+   * No terminal, execute o comando:
+   git clone <https://github.com/NakyR19/Chatbot.git>
 
 2. **Crie e ative um ambiente virtual**:
    * No Linux/WSL/macOS:
@@ -50,12 +65,12 @@ Certifique-se de ter o Python instalado na sua máquina. Os pacotes externos nec
    * .\venv\Scripts\activate
 
 3. **Instale a dependência:**
-   * No terminal, execute o comando: 
+   * No terminal, execute o comando:
    pip install -r requirements.txt
 
 4. **Inicie a aplicação:**
    Estando no diretório raiz do projeto, rode: streamlit run main.py
-   O endereço da página estará disponível no terminal(eg.:"https://localhost:8000")
+   O endereço da página estará disponível no terminal(eg.:"<https://localhost:8000>")
 
 5. **Uso interface:**
    * O histórico de conversas será exibido na sidebar da esquerda.

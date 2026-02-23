@@ -1,0 +1,20 @@
+{
+    "name": "Botafogo Time Dúvida",
+    "config": {
+        "provider": "gemini",
+        "model_name": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "max_tokens": 100,
+        "modality": "text"
+    },
+    "messages": [
+        {
+            "role": "user",
+            "content": "botafogo é time?"
+        },
+        {
+            "role": "assistant",
+            "content": "Sim! **Botafogo é um dos clubes de futebol mais tradicionais e importantes do Brasil.**\n\nSeu nome completo é **Botafogo de Futebol e Regatas**. É do Rio de Janeiro e um dos \"quatro grandes\" clubes cariocas, conhecido por sua camisa alvinegra (preta e branca) e pela Estrela Solitária em seu escudo. Tem uma rica história no futebol, com muitos títulos e grandes ídolos."
+        }
+    ]
+}

@@ -21,7 +21,7 @@ def CALL_LLM_API(config, payload):
                 if item["type"] == "text":
                     parts.append({"text": item["text"]})
                 elif item["type"] == "image_url":
-                    # Assume-se que a URL aqui é a string Base64 [cite: 45]
+                    # Assume-se que a URL aqui é a string Base64
                     parts.append({
                         "inline_data": {
                             "mime_type": "image/jpeg",

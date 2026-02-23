@@ -43,11 +43,11 @@ Certifique-se de ter o Python instalado na sua máquina. O único pacote externo
 
 2. **Crie e ative um ambiente virtual**:
    * No Linux/WSL/macOS:
-   python3 -m venv venv
-   source venv/bin/activate
+   * python3 -m venv venv
+   * source venv/bin/activate
    * No Windows:
-   python -m venv venv
-   .\venv\Scripts\activate
+   * python -m venv venv
+   * .\venv\Scripts\activate
 
 3. **Instale a dependência:**
    * No terminal, execute o comando: 

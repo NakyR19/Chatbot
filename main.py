@@ -19,7 +19,7 @@ config = ModelConfig(
     provider="gemini",
     model_name="gemini-2.5-flash", 
     temperature=0.7,
-    max_tokens=20,
+    max_tokens=100,
     modality="text"
 )
 

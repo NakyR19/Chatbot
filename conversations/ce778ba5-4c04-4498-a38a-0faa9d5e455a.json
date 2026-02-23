@@ -1,0 +1,20 @@
+{
+    "name": "Características Continentes",
+    "config": {
+        "provider": "gemini",
+        "model_name": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "max_tokens": 100,
+        "modality": "text"
+    },
+    "messages": [
+        {
+            "role": "user",
+            "content": "Olá, bom dia! Quais é a principal característica de cada continente?"
+        },
+        {
+            "role": "assistant",
+            "content": "Olá! Bom dia! Que ótima pergunta!\n\nCada continente tem suas particularidades marcantes. Aqui está uma característica principal para cada um:\n\n1.  **América do Norte:**\n    *   **Principal Característica:** Alto **desenvolvimento econômico e tecnológico**, especialmente nos EUA e Canadá, e uma **grande diversidade geográfica** que vai de desertos a tundras, passando por metrópoles globais.\n\n2.  **América do Sul:**\n    *   **Principal Característica:** **Megadiversidade natural** (abrigando a Floresta Amazônica e a Cordilheira dos Andes) e uma **rica e vibrante diversidade cultural**, com fortes influências indígenas, africanas e europeias.\n\n3.  **Europa:**\n    *   **Principal Característica:** Considerado o **berço da civilização ocidental**, possui uma **história milenar e um vasto patrimônio cultural e artístico**. É um continente altamente desenvolvido e com grande integração econômica e cultural entre seus países.\n\n4.  **Ásia:**\n    *   **Principal Característica:** É o **maior e mais populoso continente**, caracterizado por **contrastes extremos**: desde economias altamente desenvolvidas (Japão, Coreia do Sul) a regiões em desenvolvimento, e uma **imensa diversidade cultural, religiosa e geográfica** (do Everest aos desertos, das megalópoles às aldeias milenares).\n\n5.  **África:**\n    *   **Principal Característica:** Reconhecida como o **berço da humanidade**, é um continente de **vasta riqueza natural** (minerais, vida selvagem espetacular) e **diversidade cultural profunda**, mas que enfrenta **grandes desafios socioeconômicos** decorrentes de seu histórico colonial.\n\n6.  **Oceania:**\n    *   **Principal Característica:** É o **continente mais isolado e o menor em área terrestre**, predominantemente **insular**. Caracteriza-se por uma **biodiversidade única** (com espécies endêmicas como cangurus e coalas) e uma forte **conexão com o oceano**.\n\n7.  **Antártica:**\n    *   **Principal Característica:** É o **continente mais frio, seco e ventoso**, quase inteiramente coberto por gelo. Sua principal característica é ser um **território dedicado à pesquisa científica e à preservação ambiental**, sem população humana permanente.\n\nEspero que esta visão geral ajude a entender um pouco mais sobre cada um! Tenha um ótimo dia!"
+        }
+    ]
+}

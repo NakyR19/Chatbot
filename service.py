@@ -2,6 +2,7 @@ from message import Message
 import requests
 import base64
 
+# API_KEY deve ser inserida pelo usuário
 api_key = 'AIzaSyCX9JAdZwTVjD4ii6DPYNu-YbVK1WylxLg'
 
 def TRUNCATE_HISTORY(history, limit):
@@ -94,7 +95,7 @@ def ENCODE_IMAGE(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-# Implementação do Cenário C
+# Implementação da análise de imagem
 def ANALYZE_IMAGE(image_path, user_query, config):
     base64_img = ENCODE_IMAGE(image_path)
     

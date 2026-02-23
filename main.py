@@ -14,15 +14,6 @@ if "current_id" not in st.session_state:
 if "chat_title" not in st.session_state:
     st.session_state.chat_title = "Nova Conversa" # Título exibido no topo do chat
 
-# Configurando o modelo
-config = ModelConfig(
-    provider="gemini",
-    model_name="gemini-2.5-flash", 
-    temperature=0.7,
-    max_tokens=100,
-    modality="text"
-)
-
 # Gerenciamento das conversas
 with st.sidebar:
     st.title("📂 Conversas")
@@ -63,6 +54,26 @@ with st.sidebar:
                 # Recarrega a página para atualizar a lista da sidebar
                 st.rerun()
 
+# Configuração do modelo via interface
+with st.sidebar:
+    st.title("🔑 Configurações")
+    user_api_key = st.text_input("Insira sua Gemini API Key", type="password")
+    
+    # Novo campo para Temperatura
+    # min_value=0.0, max_value=2.0, default=0.7, step=0.1
+    temp_value = st.slider("Temperatura do Algoritmo", 0.0, 2.0, 0.7, 0.1)
+    
+    st.divider()
+
+# Configurando o modelo
+config = ModelConfig(
+    provider="gemini",
+    model_name="gemini-2.5-flash", 
+    temperature=temp_value,
+    max_tokens=100,
+    modality="text"
+)
+
 # Página principal
 st.title(f"🤖 {st.session_state.chat_title}")
 
@@ -87,6 +98,11 @@ with st.sidebar:
 
 # Barra de digitação do usuário
 if prompt := st.chat_input("Digite sua mensagem..."):
+    # Verificando se a API_KEY foi enviada
+    if not user_api_key:
+        st.error("Por favor, insira sua API KEY na barra lateral antes de continuar")
+        st.stop()
+
     # Exibição da mensagem do usuário
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -98,7 +114,7 @@ if prompt := st.chat_input("Digite sua mensagem..."):
     if not st.session_state.history and st.session_state.chat_title == "Nova Conversa":
         try:
             # Chama a função do service.py para resumir o input 
-            novo_titulo = generate_conversation_title(prompt, config)
+            novo_titulo = generate_conversation_title(prompt, config, user_api_key)
             st.session_state.chat_title = novo_titulo
         except Exception:
             st.session_state.chat_title = "Conversa"
@@ -119,7 +135,8 @@ if prompt := st.chat_input("Digite sua mensagem..."):
                     prompt, 
                     temp_path,
                     st.session_state.history, 
-                    config
+                    config,
+                    user_api_key
                 )
                 st.markdown(response)
                 st.session_state.history = updated_history

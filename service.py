@@ -3,12 +3,12 @@ import requests
 import base64
 
 # API_KEY deve ser inserida pelo usuário
-api_key = 'INSIRA_A_API_KEY'
+# api_key 
 
 def TRUNCATE_HISTORY(history, limit):
     return history[-limit:] if len(history) > limit else history
 
-def CALL_LLM_API(config, payload):
+def CALL_LLM_API(config, payload, api_key):
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{config.model_name}:generateContent?key={api_key}"
     
     contents = []
@@ -53,19 +53,19 @@ def EXTRACT_CONTENT(api_response):
         return "".join([p.get("text", "") for p in parts])
     return "Erro: A api não retornou conteúdo válido."
 
-def generate_conversation_title(first_input, config):
+def generate_conversation_title(first_input, config, api_key):
     prompt = f"Crie um título máximo 4 palavras que resuma o seguinte texto. Responda apenas com o título, sem aspas ou pontuação: '{first_input}'"
     payload = [{"role": "user", "content": prompt}]
     
     try:
-        api_response = CALL_LLM_API(config, payload)
+        api_response = CALL_LLM_API(config, payload, api_key)
         return EXTRACT_CONTENT(api_response).strip().strip('"\'')
     except Exception:
         return "Nova Conversa"
 
 
 # Função para orquestrar a análise de imagem
-def conversational_agent_multimodal(user_input, image_path, history, config):
+def conversational_agent_multimodal(user_input, image_path, history, config, api_key):
     # Se houver imagem, cria conteúdo multimodal 
     if image_path:
         base64_img = ENCODE_IMAGE(image_path)
@@ -83,7 +83,7 @@ def conversational_agent_multimodal(user_input, image_path, history, config):
     payload_msgs = TRUNCATE_HISTORY(history, limit=config.max_tokens)
     payload = [msg.to_dict() for msg in payload_msgs]
     
-    api_response = CALL_LLM_API(config, payload)
+    api_response = CALL_LLM_API(config, payload, api_key)
     
     reply_text = EXTRACT_CONTENT(api_response)
     history.append(Message(role="assistant", content=reply_text))
@@ -96,7 +96,7 @@ def ENCODE_IMAGE(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Implementação da análise de imagem
-def ANALYZE_IMAGE(image_path, user_query, config):
+def ANALYZE_IMAGE(image_path, user_query, config, api_key):
     base64_img = ENCODE_IMAGE(image_path)
     
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{config.model_name}:generateContent?key={api_key}"

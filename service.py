@@ -3,7 +3,7 @@ import requests
 import base64
 
 # API_KEY deve ser inserida pelo usuário
-api_key = 'AIzaSyCX9JAdZwTVjD4ii6DPYNu-YbVK1WylxLg'
+api_key = 'INSIRA_A_API_KEY'
 
 def TRUNCATE_HISTORY(history, limit):
     return history[-limit:] if len(history) > limit else history

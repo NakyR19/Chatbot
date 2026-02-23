@@ -1,6 +1,6 @@
 # Chatbot de texto com persistência
 
-Este projeto implementa um Agente Conversacional em Python, capaz de interagir com Grandes Modelos de Linguagem (LLMs). Ele possui uma arquitetura modular que permite a troca de motores de Inteligência Artificial em tempo de execução, suportando atualmente o **Google Gemini** e o **Meta LLaMA** (via Groq). 
+Este projeto implementa um Agente Conversacional em Python, capaz de interagir com Grandes Modelos de Linguagem (LLMs). Ele possui uma arquitetura modular que permite a troca de motores de Inteligência Artificial em tempo de execução, suportando atualmente o **Google Gemini**.
 
 O sistema destaca-se por implementar persistência de dados em JSON e gerenciamento inteligente de contexto através da técnica de **Janela Deslizante (Sliding Window)**, o que previne o esgotamento de tokens da API durante conversas longas.
 
@@ -25,13 +25,11 @@ Para que o chatbot consiga se comunicar com a inteligência artificial, você pr
 Abra o arquivo **`service.py`** e localize as seguintes variáveis nas primeiras linhas do código:
 
 api_key = 'COLOQUE_SUA_CHAVE_DO_GEMINI_AQUI'
-groq_key = 'COLOQUE_SUA_CHAVE_DA_GROQ_AQUI'
 
 Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de produção, recomenda-se o uso de variáveis de ambiente .env para maior segurança).*
 
 ### 2. Como obter as chaves 
 * **Google Gemini:** Acesse o Google AI Studio, faça login com sua conta Google e clique em "Get API key" para gerar a sua chave.
-* **Meta LLaMA (Groq):** Acesse o Groq, crie sua conta de desenvolvedor e clique em "Create API Key" para gerar a sua chave de acesso ultrarrápido.
 
 ---
 
@@ -39,17 +37,27 @@ Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de
 
 Certifique-se de ter o Python instalado na sua máquina. O único pacote externo necessário para rodar o projeto é o `requests`.
 
-1. **Instale a dependência:**
-   No terminal, execute o comando:
-   pip install requests
+1. **Clone o repositório**:
+   No terminal, execute o comando: git clone https://github.com/NakyR19/Chatbot.git
 
-2. **Inicie a aplicação:**
-   Estando no diretório raiz do projeto, rode:
-   python main.py
+2. **Crie e ative um ambiente virtual**:
+   # No Linux/WSL/macOS:
+   python3 -m venv venv
+   source venv/bin/activate
+   # No Windows:
+   python -m venv venv
+   .\venv\Scripts\activate
 
-3. **Uso CLI:**
-   * O terminal exibirá um menu perguntando qual IA você deseja usar (0 para Gemini, 1 para LLaMA).
+3. **Instale a dependência:**
+   No terminal, execute o comando: pip install -r requirements.txt
+
+4. **Inicie a aplicação:**
+   Estando no diretório raiz do projeto, rode: streamlit run main.py
+   O endereço da página estará disponível no terminal(eg.:"https://localhost:8000")
+
+5. **Uso interface:**
+   * O histórico de conversas será exibido na sidebar da esquerda.
+   * A página principal contém a barra de input que o usuário envia a mensagem.
+   * É permitido o envio de imagens. No sidebar da esquerda, na parte inferior, há a opção de anexar arquivo de imagem.
+   Ao enviar um arquivo, também é necessário enviar uma mensagem na barra de input informando o que deve ser feito.
    * Em seguida, listará as conversas anteriores salvas na pasta `conversations/`. Você pode digitar o número de uma conversa antiga para retomá-la ou pressionar ENTER para começar uma nova.
-   * Para encerrar e salvar o progresso atual, digite `exit`.
-
-   **Uso Interface:**

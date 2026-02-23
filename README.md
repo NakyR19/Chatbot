@@ -38,18 +38,20 @@ Substitua os valores de exemplo pelas suas chaves reais. *(Nota: Em ambientes de
 Certifique-se de ter o Python instalado na sua máquina. O único pacote externo necessário para rodar o projeto é o `requests`.
 
 1. **Clone o repositório**:
-   No terminal, execute o comando: git clone https://github.com/NakyR19/Chatbot.git
+   * No terminal, execute o comando: 
+   git clone https://github.com/NakyR19/Chatbot.git
 
 2. **Crie e ative um ambiente virtual**:
-   # No Linux/WSL/macOS:
+   * No Linux/WSL/macOS:
    python3 -m venv venv
    source venv/bin/activate
-   # No Windows:
+   * No Windows:
    python -m venv venv
    .\venv\Scripts\activate
 
 3. **Instale a dependência:**
-   No terminal, execute o comando: pip install -r requirements.txt
+   * No terminal, execute o comando: 
+   pip install -r requirements.txt
 
 4. **Inicie a aplicação:**
    Estando no diretório raiz do projeto, rode: streamlit run main.py
